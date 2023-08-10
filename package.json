@@ -1,0 +1,22 @@
+{
+  "name": "js-toggle-password",
+  "version": "1.0.0",
+  "description": "Enhances the password input fields on your web page by adding a toggle button to switch between masked and plain text passwords.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThantZinSwe/js-toggle-password.git"
+  },
+  "keywords": [
+    "js-toggle-password"
+  ],
+  "author": "tzs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThantZinSwe/js-toggle-password/issues"
+  },
+  "homepage": "https://github.com/ThantZinSwe/js-toggle-password#readme"
+}
