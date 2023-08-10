@@ -16,7 +16,7 @@ This repo enhances the password input fields on your web page by adding a toggle
 
 ### HTML
 
-First input password have a parent div element.
+First, input type password have a parent `div` element.
 
 ```html
 <html>
@@ -30,78 +30,51 @@ First input password have a parent div element.
         </form>
 
         <script type="module">
-          import togglePassword from "./src/index.js";
+          import TogglePassword from "./src/index.js";
     
-          togglePassword().create();
+          const togglePassword = new TogglePassword();
+          togglePassword.create();
         </script>
     </body>
 </html>
 ```
 
-## Function Summary
+## Configuration
 
-Function are `create()`, `styles()`, `position()` and `custom()`. In that function using chaining method, `create` function must be need to call
-but other function not need to call every time.
+You can modify toggle password svg styles, postion and svg icons using below property.
 
-### create()
 
-Create and apply toggle password.
-
-```js
-
-togglePassword().create();
-
-```
-
-You have nothing to modify only that funtion can use.
-
-### styles()
-
-This function is to modify toggle password svg. That have **3** parameters and you can use when you need time.
-
-|           |                                          |
-| --------- | ---------------------------------------- |
-| `width`   | Number - css pixels                      |
-| `height`  | Number - css pixels                      |
-| `color`   | String - hex color code                  |
+|  Property  | Name            | Type                                     |
+|------------| --------------- | ---------------------------------------- |
+|   styles   | `width`         | Number - css in pixels                   |
+|            | `height`        | Number - css in pixels                   |
+|            | `color`         | String - hex color code                  |
+|            |                 |                                          |
+|  position  | `right`         | Number - css in pixels                   |
+|            | `top`           | Number - css in percentage               |
+|            |                 |                                          |
+|    icons   | `visibleSvg`    | String - svg code                        |
+|            | `inVisibleSvg`  | String - svg code                        |
 
 
 ```js
+const togglePassword = new TogglePassword({
+    styles: {
+        width: 24, // default
+        height: 24, // default
+        color: '#000000', // default
+    },
+    position: {
+        right: 8, // default
+        top: 50, // default
+    },
+    icons: {
+        visibleSvg: 'svgcode',
+        inVisibleSvg: 'svgcode'
+    }
+});
 
-togglePassword().styles({width:50,height:50,color:'#000000'}).create();
-
+togglePassword.create();
 ```
 
-
-### postion()
-
-This function is to modify toggle password position. Sometimes you don't use to css framework (eg.tailwindcss) and not include reset code in css 
-body 
-at that time you can modify toggle password svg. That have **2** parameters.
-
-|           |                                          |
-| --------- | ---------------------------------------- |
-| `right`   | Number - css pixels                      |
-| `top`     | Number - percentage                      |
-
-```js
-
-togglePassword().position({right:8,top:50}).create();
-
-```
-
-### custom()
-
-This function is to change custom toggle password svg. That have **2** parameters and they must be svg code.
-
-|                |                                          |
-| -------------  | ---------------------------------------- |
-| `visibleSvg`   | String - svg code                        |
-| `inVisibleSvg` | String - svg code                        |
-
-```js
-
-togglePassword().custom({visibleSvg:'svgcode',inVisibleSvg:'svgcode'}).create();
-
-```
 
