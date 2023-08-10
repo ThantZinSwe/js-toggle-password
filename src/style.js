@@ -17,8 +17,8 @@ function createStyles(styles, position) {
     }
     .js-toggle-password-position {
       position: absolute;
-      right: ${position.right ?? 8}px;
-      top: ${position.top ?? 50}%;
+      right: ${position.right}px;
+      top: ${position.top}%;
       transform: translateY(-50%);
       cursor: pointer;
   }`;
