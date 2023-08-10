@@ -2,7 +2,7 @@
   "name": "js-toggle-password",
   "version": "1.0.2",
   "description": "Enhances the password input fields on your web page by adding a toggle button to switch between masked and plain text passwords.",
-  "main": "src/index.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
