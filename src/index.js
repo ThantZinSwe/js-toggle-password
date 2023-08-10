@@ -47,4 +47,4 @@ class TogglePassword {
   }
 }
 
-export default TogglePassword;
+module.exports = TogglePassword;
