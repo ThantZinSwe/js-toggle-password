@@ -37,6 +37,7 @@ function createSvgElement(svg) {
   const svgElement = parser
     .parseFromString(svg, "image/svg+xml")
     .querySelector("svg");
+  svgElement.removeAttribute("class");
   svgElement.classList.add("js-toggle-password-svg");
 
   return svgElement;
